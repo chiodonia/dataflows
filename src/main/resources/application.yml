@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  http2:
+    enabled: true
+
+logging:
+  level:
+    root: WARN
+    ch.post: DEBUG
+    org.apache.kafka: WARN
+    reactor.netty.http.client: DEBUG
+
+management:
+  endpoint.health:
+    show-details: always
+    show-components: always
+    probes.enabled: true
+  security.enabled: false
+  endpoints.web.exposure.include: '*'
+  metrics:
+    enable:
+      jvm: false
